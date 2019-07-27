@@ -1,0 +1,19 @@
+{
+  "address": {
+    "tasks": "https://strmrdr.000webhostapp.com/server/php/requests.php",
+    "storage": {
+      "files": "https://strmrdr.000webhostapp.com/server/storage/users/",
+      "icons": "https://strmrdr.000webhostapp.com/angular/storage/system/icons/"
+    },
+    "download": "https://strmrdr.000webhostapp.com/server/storage/temp_zip_files/",
+    "login": "https://strmrdr.000webhostapp.com/server/php/requests.php/"
+  },
+  "mode": {
+    "offline": false,
+    "browserSynch": true
+  },
+  "loging": {
+    "localStorageItem": "logged",
+    "autologin": true
+  }
+}
