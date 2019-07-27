@@ -1,0 +1,38 @@
+<div
+  #mainContainer
+  (mousedown)="onMouseDown($event)"
+  (mouseup)="onMosueUp($event)"
+  (contextmenu)="onContextmenu($event); $event.stopPropagation()"
+  [className]="
+    mode.current['container'] + ' ' + mode.current['container'] + mode.size
+  "
+  (drop)="onDrop($event)"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+  [style.backgroundColor]="bgColor"
+  [style.opacity]="opacity"
+>
+  <file-view
+    #fileItem
+    *ngFor="let file of service.filesList; index as i"
+    (unselectAll)="unselectAll()"
+    [draggingData]="getOverAllDraggingData.bind(this)"
+    [selectionEmitter]="filesSelection"
+    [markAsDraggedEmitter]="markAsDraggedEmitter"
+    [isCovered]="this.isCovered.bind(this)"
+    [file]="file"
+    [index]="i"
+  ></file-view>
+</div>
+<div [className]="'status-bar'">
+  <span> {{ service.dirNumberOfItems }} items</span>
+  <span *ngIf="service.count">
+    selected {{ service.count }} items {{ filesTotalSizeFormat() }}</span
+  >
+</div>
+<drag-selection-box
+  #dragSelectionBox
+  [scrollContainer]="this.scrollContainer.bind(this)"
+  [containerSize]="this.child.nativeElement.getBoundingClientRect()"
+  [scrollbarWidth]="this.getScrollbarWidth.bind(this)"
+></drag-selection-box>

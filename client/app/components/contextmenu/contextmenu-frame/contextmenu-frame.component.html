@@ -1,0 +1,11 @@
+<div
+  #container
+  class="contextmenu-container"
+  [style.visibility]="visibility()"
+  [style.left]="service.x"
+  [style.top]="service.y"
+>
+  <contextmenu [type]="'file'"></contextmenu>
+  <contextmenu [type]="'background'"></contextmenu>
+  <contextmenu [type]="'trash'"></contextmenu>
+</div>

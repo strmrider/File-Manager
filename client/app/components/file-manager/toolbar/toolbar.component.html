@@ -1,0 +1,56 @@
+<div class="toolbar-container">
+  <div class="view-container">
+    <button
+      [className]="'toolbar-btn ' + mode.current['modeIcon']"
+      [title]="mode.current['title']"
+      (click)="changeMode()"
+    >
+      {{ mode["modeIcon"] }}
+    </button>
+    <select
+      class="selection-box"
+      (change)="changeIconsSize($event.target.value)"
+      [title]="'Change icons size'"
+    >
+      <option class="selection-box-item" value="small">Small</option>
+      <option class="selection-box-item" value="medium">Medium</option>
+      <option class="selection-box-item" value="large">Large</option>
+    </select>
+    <div class="vertical-line"></div>
+    <select
+      class="selection-box"
+      (change)="sort($event.target.value)"
+      [title]="'Sort'"
+    >
+      <option class="selection-box-item" value="name">Name</option>
+      <option class="selection-box-item" value="size">Size</option>
+      <option class="selection-box-item" value="creation">Date</option>
+    </select>
+    <button
+      [className]="'toolbar-btn ' + orderIcon()"
+      (click)="changeOrder()"
+      [title]="'Reverse sort direction'"
+    ></button>
+  </div>
+  <div class="search-container">
+    <input
+      #search
+      type="text"
+      class="search-box"
+      placeholder="Search in folder"
+      (input)="onSearch()"
+      [style.backgroundColor]="bgColor"
+    />
+  </div>
+  <div>
+    <button
+      class="toolbar-btn fas fa-check-double"
+      (click)="selectAll()"
+      [title]="'Select all'"
+    ></button>
+    <button
+      class="toolbar-btn fas fa-ellipsis-v"
+      (click)="openMenu($event)"
+    ></button>
+  </div>
+</div>

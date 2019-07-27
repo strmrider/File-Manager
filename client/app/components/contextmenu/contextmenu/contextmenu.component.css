@@ -1,0 +1,36 @@
+.contextmenu-list {
+  list-style: none;
+  position: absolute;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 200px;
+
+  background-color: #f3f3f3;
+  cursor: context-menu;
+  box-shadow: 2px 2px grey;
+  user-select: none;
+  z-index: 2;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.contextmenu-item {
+  display: flex;
+  padding: 8px 5px;
+}
+
+.contextmenu-item > i {
+  padding-right: 8px;
+}
+
+.contextmenu-item:hover {
+  background-color: rgb(106, 174, 252);
+  color: white;
+}
+
+.contextmenu-item-image {
+  size: 20px;
+}

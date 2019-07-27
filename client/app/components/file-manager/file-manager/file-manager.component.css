@@ -1,0 +1,76 @@
+.file-manager-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 95%;
+}
+
+.upper-section {
+  padding: 5px;
+  padding-bottom: 15px;
+  padding-left: 200px;
+  background-color: rgb(247, 241, 233);
+  height: 10%;
+  border-bottom: 2px solid;
+}
+
+.path-bar-section,
+.toolbar-section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.lower-section {
+  margin-top: 5px;
+  height: 88%;
+  max-height: 90%;
+}
+
+.nav-tree-section {
+  float: left;
+  width: 10%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.central-section {
+  float: left;
+  width: 90%;
+  height: 90%;
+  max-height: 91.6%;
+}
+
+.dir-view-section {
+  float: left;
+  transition: 0.5s;
+  height: 100%;
+  max-height: 100%;
+}
+
+.file-details-section {
+  float: left;
+  height: 100%;
+  max-height: 100%;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.dir-view-section-opened {
+  width: 97%;
+}
+
+.dir-view-section-closed {
+  width: 77.5%;
+}
+
+.file-details-section-opened {
+  width: 0;
+}
+
+.file-details-section-closed {
+  float: right;
+  width: 20%;
+  display: block;
+  max-height: 100%;
+}

@@ -1,0 +1,66 @@
+.nav-tree-item,
+.dir-container {
+  width: 150px;
+  height: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 2px;
+  margin-top: 5px;
+  transition: 0.4s;
+
+  display: flex;
+}
+
+.nav-tree-item {
+  width: 150px;
+  height: 25px;
+  padding: 5px;
+}
+
+.sub-dirs-container {
+  transition: 0.4s;
+}
+
+.nav-tree-item,
+.main-dir-btn,
+.dir-btn {
+  outline: 0px;
+  border: none;
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  max-width: 150px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.dir-btn {
+  font-size: 15px;
+}
+
+.toggle-icon {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.item-icon,
+.toggle-icon-main {
+  color: rgb(82, 80, 80);
+  font-size: 22px;
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.item-icon {
+  margin-left: 5px;
+}

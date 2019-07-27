@@ -1,0 +1,18 @@
+.move-modal-dir-list-item {
+  transition: 0.4s;
+  font-size: 17px;
+  padding: 5px;
+}
+
+/* Selection style */
+.bg-selected {
+  background-color: rgba(133, 210, 248, 0.5);
+}
+
+.bg-over {
+  background-color: rgba(129, 213, 255, 0.5);
+}
+
+.bg-disabled {
+  opacity: 0.2;
+}

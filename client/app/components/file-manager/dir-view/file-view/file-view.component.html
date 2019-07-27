@@ -1,0 +1,59 @@
+<div
+  #container
+  [className]="
+    mode.current['fileContainer'] +
+    mode.size +
+    ' ' +
+    getContainer() +
+    ' ' +
+    style.current['bg']
+  "
+  (mousedown)="onMouseDown($event)"
+  (mouseup)="onMouseUp($event)"
+  (mouseover)="onMouseOver($event)"
+  (mouseleave)="onMouseLeave($event)"
+  (contextmenu)="onContextmenu($event)"
+  (dblclick)="onDoubleClick()"
+  (drop)="onDrop($event)"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+>
+  <div [className]="mode.current['imgContainer']">
+    <img
+      *ngIf="!isVideo()"
+      [className]="mode.current.img + ' ' + mode.current.img + mode.size"
+      [src]="src"
+    />
+    <video
+      #video
+      *ngIf="isVideo()"
+      [className]="mode.current.video + ' ' + mode.current.video + mode.size"
+      [src]="src + '#t=2'"
+      (mouseover)="onVideoOver()"
+      (mouseleave)="onVideoLeave()"
+    ></video>
+  </div>
+  <div
+    title="{{ file.name }} "
+    [className]="
+      mode.current['name'] +
+      ' ' +
+      mode.current['name'] +
+      mode.size +
+      ' ' +
+      style.current['name']
+    "
+  >
+    {{ file.name }}
+  </div>
+  <div
+    [className]="mode.current['starred'] + ' ' + listModeStarred()"
+    [title]="'Starred status'"
+  ></div>
+  <div [className]="mode.current['time']" [title]="'Creation date'">
+    {{ file.dates.creation.serializeDate() }}
+  </div>
+  <div [className]="mode.current['size']" [title]="'File size'">
+    {{ listModeSize() }}
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div [className]="'file-details-container'" [style.display]="visibility()">
+  <div class="top-bar">
+    <div class="details-close-btn" (click)="close()">&times;</div>
+  </div>
+  <div *ngIf="!legitFile()">No details</div>
+  <div *ngIf="legitFile()">
+    <file-details-content></file-details-content>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<button
+  (click)="onClick(index)"
+  (contextmenu)="onContextmenu($event, index)"
+  (mouseover)="onMouseOver($event, index)"
+  (mouseup)="onMouseUp(index)"
+  (mouseleave)="onMouseLeave()"
+  [className]="'path-bar-button ' + style.current.bg"
+  [title]="dir.name"
+>
+  {{ dir.name }}
+</button>

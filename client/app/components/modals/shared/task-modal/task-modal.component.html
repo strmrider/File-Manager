@@ -1,0 +1,20 @@
+<div
+  [className]="'modal-background'"
+  (mousemove)="setPosition($event)"
+  (mouseup)="setMouseDown($event, false)"
+>
+  <div
+    #modalContainer
+    [className]="'modal-container'"
+    [style.left]="x"
+    [style.top]="y"
+  >
+    <div [className]="'modal-header'" (mousedown)="setMouseDown($event, true)">
+      <span [className]="'modal-title'">{{ title }}</span>
+      <span [className]="'modal-close-btn'" (click)="close()">&#10006;</span>
+    </div>
+    <div [className]="'modal-content'">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

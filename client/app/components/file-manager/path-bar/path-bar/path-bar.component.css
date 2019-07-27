@@ -1,0 +1,9 @@
+.path-bar-container {
+  width: 100%;
+  display: flex;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

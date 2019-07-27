@@ -1,0 +1,62 @@
+/******************
+* list mode 
+*******************/
+.file-item-container-list {
+  display: inline-flex;
+
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  width: 80%;
+  height: 50px;
+  user-select: none;
+  align-items: center;
+}
+
+.file-image-container-list {
+  min-width: 30px;
+  max-width: 30px;
+}
+
+.file-item-img-list {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  padding-left: 5px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.file-item-video-list {
+  max-width: 25px;
+  max-width: 25px;
+}
+
+.file-item-name-list {
+  width: 50%;
+  padding-left: 15px;
+
+  text-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  user-select: none;
+}
+
+.file-item-starred-list {
+  width: 35px;
+  user-select: none;
+  color: gold;
+}
+
+.file-item-time-list {
+  width: 110px;
+  user-select: none;
+}
+
+.file-item-size-list {
+  width: 75px;
+  user-select: none;
+}

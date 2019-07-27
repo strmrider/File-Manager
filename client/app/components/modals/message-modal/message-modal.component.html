@@ -1,0 +1,10 @@
+<div [style.display]="visibility">
+  <task-modal [title]="title" (onClose)="close()">
+    <div class="message-frame">
+      <div class="message-text">{{ message }}</div>
+      <div class="buttons-panel">
+        <button class="ok-btn" (click)="close()">Ok</button>
+      </div>
+    </div>
+  </task-modal>
+</div>

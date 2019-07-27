@@ -1,0 +1,38 @@
+<div>
+  <div
+    [className]="
+      'dir-container ' + mainDirClassName() + ' ' + style.current['bg']
+    "
+    (mousedown)="onMouseDown($event)"
+    (mouseup)="onMouseUp($event)"
+    (mouseover)="onMouseOver()"
+    (mouseleave)="onMouseLeave()"
+    (contextmenu)="onContextmenu($event)"
+  >
+    <div
+      [style.marginLeft.px]="indentation * 10"
+      [className]="iconClassName()"
+      (click)="toggle()"
+    >
+      <i #toggleIcon [className]="icon()" (mouseover)="onIconMouseOver()"></i>
+    </div>
+    <span
+      [className]="dirNameClassName() + ' ' + style.current['name']"
+      [title]="dir.name"
+    >
+      {{ dir.name }}
+    </span>
+  </div>
+  <div
+    #subDirsList
+    class="sub-dirs-container"
+    *ngFor="let subDir of dirsList"
+    [style.display]="subDirsDisplay()"
+  >
+    <dir-tree
+      [dir]="subDir"
+      [indentation]="indentation + 1"
+      (setDrag)="this.reemit.bind(this)($event)"
+    ></dir-tree>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div *ngIf="display" class="register-container">
+  <div class="register-caption">Create new account</div>
+  <div class="data-input">
+    <input
+      #username
+      class="register-input"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+    <div class="errors">{{ usernameError }}</div>
+    <input
+      #email
+      class="register-input"
+      type="email"
+      name="email"
+      placeholder="email"
+      required
+    />
+    <div class="errors">{{ emailError }}</div>
+    <input
+      #password
+      class="register-input"
+      type="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+    <div class="errors">{{ passwordError }}</div>
+  </div>
+  <button class="register-btn" (click)="creatAccount()">
+    Create account
+  </button>
+  <div class="errors">{{ errorMessage }}</div>
+  <div class="sign-in" (click)="signIn()">Sign in</div>
+</div>

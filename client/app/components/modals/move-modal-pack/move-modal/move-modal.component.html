@@ -1,0 +1,56 @@
+<div [style.display]="visibility">
+  <task-modal [title]="title" (onClose)="close()">
+    <div #container class="move-modal-container" (click)="onClick($event)">
+      <div class="move-modal-nav-actions" [style.display]="navBtnsDisplay">
+        <button
+          class="fas fa-home move-modal-nav-btn"
+          title="Main folder"
+          (click)="service.goToMain()"
+        ></button>
+        <button
+          class="fas fa-level-up-alt move-modal-nav-btn"
+          title="Parent folder"
+          (click)="service.goUp()"
+        ></button>
+        <button
+          class="fas fa-folder-plus move-modal-nav-btn"
+          title="New folder"
+          (click)="displayNewFolderDiv(true)"
+        ></button>
+      </div>
+
+      <div class="new-folder-container" [style.display]="newDirDisplay">
+        <input #newDirInput type="text/" class="new-folder-input" />
+        <button
+          class="fas fa-check-circle move-modal-nav-btn"
+          title="Create"
+          (click)="createNewDir()"
+        ></button>
+        <button
+          class="fas fa-times move-modal-nav-btn"
+          title="Cancel"
+          (click)="displayNewFolderDiv(false)"
+        ></button>
+      </div>
+
+      <div class="move-modal-dir-name">
+        {{ service.currentDirName }}
+      </div>
+      <hr />
+      <div class="move-modal-dir-list">
+        <div *ngFor="let dir of service.dirList; index as i">
+          <move-modal-item
+            *ngIf="!dir.isShortcut"
+            [index]="i"
+          ></move-modal-item>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button class="move-modal-btn move-btn" (click)="move()">Move</button>
+        <button class="move-modal-btn close-btn" (click)="close()">
+          Close
+        </button>
+      </div>
+    </div>
+  </task-modal>
+</div>

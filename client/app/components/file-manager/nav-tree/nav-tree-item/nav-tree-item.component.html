@@ -1,0 +1,10 @@
+<div
+  [className]="'nav-tree-item ' + style.current['bg']"
+  (mousedown)="onMouseDown()"
+  (mouseup)="onMouseUp()"
+  (mouseover)="onMouseOver()"
+  (mouseleave)="onMouseLeave()"
+>
+  <i [className]="'item-icon ' + icon"></i>
+  <span [className]="style.current['name']">{{ caption }}</span>
+</div>

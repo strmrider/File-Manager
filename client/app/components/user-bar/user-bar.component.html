@@ -1,0 +1,30 @@
+<div class="user-bar">
+  <div class="user-data fas fa-user" title="username">
+    {{ profile.username }}
+  </div>
+  <div class="user-data far fa-clock" title="Last login">
+    {{ profile.lastLogin.getDate() }}
+  </div>
+  <div class="user-data far fa-hdd" title="Total storage">
+    {{ totalStorage() }}
+  </div>
+  <div class="user-data user-toolbar">
+    <div
+      class="user-toolbar-item logout-btn fas fa-power-off"
+      (click)="logout()"
+      title="Logout"
+    ></div>
+
+    <div
+      class="user-toolbar-item fas fa-sync"
+      (click)="refreshSystem()"
+      title="Refresh file system"
+    ></div>
+    <div
+      [className]="
+        'user-toolbar-item fas fa-server server-mode-' + serverMode()
+      "
+      [title]="serverModeTitle()"
+    ></div>
+  </div>
+</div>

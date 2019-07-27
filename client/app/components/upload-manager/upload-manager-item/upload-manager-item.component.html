@@ -1,0 +1,18 @@
+<div class="uploaded-file">
+  <span [className]="'file-type-icon ' + typeIcon()"></span>
+  <div class="uploaded-file-name">
+    <span class="uploaded-file-name-text">
+      {{ item.name }}
+    </span>
+  </div>
+
+  <span *ngIf="item.isDirectory && status" class="uploads-count"
+    >{{ status.uploaded }} / {{ status.totalItems }}</span
+  >
+  <span
+    [className]="'status-icon ' + getIconView()"
+    (mouseover)="onMouseOver()"
+    (mouseleave)="onMouseLeave()"
+    (click)="onStatusIconClick()"
+  ></span>
+</div>

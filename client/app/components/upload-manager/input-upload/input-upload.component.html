@@ -1,0 +1,16 @@
+<div class="uploads-container">
+  <input
+    #filesUplaod
+    type="file"
+    size="chars"
+    multiple
+    (change)="filesUploadOnChange($event)"
+  />
+  <input
+    #folderUpload
+    type="file"
+    webkitdirectory
+    mozdirectory
+    (change)="folderUploadOnChange($event)"
+  />
+</div>

@@ -1,0 +1,52 @@
+.details-tab-content-container {
+  user-select: none;
+}
+
+.details-file-icon {
+  font-size: 100px;
+  text-align: center;
+}
+.icon {
+  opacity: 0.7;
+}
+.note {
+  display: flex;
+}
+
+.note-normal {
+  width: 80%;
+  height: 10%;
+  background: transparent;
+  resize: none;
+  border: none;
+  outline: none;
+  cursor: default;
+  font-size: 14px;
+  font-family: serif;
+}
+
+.note-edit {
+  width: 80%;
+  height: 10%;
+  resize: none;
+}
+
+.edit-btn {
+  margin-right: 5px;
+  font-size: 16px;
+  background: transparent;
+  opacity: 0.5;
+  border: 0;
+  outline: 0;
+}
+
+.description {
+  margin: 10px;
+}
+.edit-btn:hover {
+  opacity: 1;
+}
+
+.add-description-caption {
+  width: 80%;
+}

@@ -1,0 +1,83 @@
+.register-container {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 25px grey;
+  padding: 20px 0 30px 0;
+  width: 400px;
+  height: 400px;
+
+  align-items: center;
+  justify-content: center;
+
+  top: 200px;
+  left: 0;
+  margin: auto;
+
+  transition: 1s;
+
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.register-caption {
+  font-size: 28px;
+  margin: 25px;
+  align-content: center;
+  cursor: default;
+}
+
+.register-input,
+.register-btn {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 25px;
+  opacity: 0.85;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.register-btn {
+  width: 325px;
+}
+
+.register-input:hover {
+  opacity: 1;
+}
+
+.register-btn:hover {
+  background-color: #575a8b;
+  opacity: 1;
+}
+
+.register-btn {
+  color: white;
+  background-color: #575a8b;
+}
+
+.errors {
+  padding-top: 5px;
+  padding-left: 25px;
+  color: red;
+}
+
+.sign-in {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(204, 0, 187);
+  text-decoration: none;
+
+  margin-bottom: 10px;
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+.sign-in:hover {
+  text-decoration: underline;
+}

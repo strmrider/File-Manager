@@ -1,0 +1,23 @@
+<div
+  class="file-drag-icon"
+  [style.left]="posX"
+  [style.top]="posY"
+  [style.display]="visibility(service.display.container)"
+>
+  <div
+    class="folder-content-drag"
+    [style.display]="visibility(service.display.dirView)"
+  >
+    <div class="file-drag-icon-name">{{ caption }}</div>
+    <div *ngIf="amount > 1" class="file-drag-icon-files-num">
+      {{ amount }}
+    </div>
+  </div>
+
+  <div
+    class="nav-tree-drag"
+    [style.display]="visibility(service.display.navTree)"
+  >
+    {{ caption }}
+  </div>
+</div>

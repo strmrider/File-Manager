@@ -1,0 +1,100 @@
+<div class="details-tab-content-container">
+  <div [className]="'details-file-icon'">
+    <i [className]="'icon ' + fileIcon()"></i>
+  </div>
+  <hr />
+  <file-details-item
+    [caption]="'Name:'"
+    [value]="file.name"
+    [title]="'Full name'"
+  ></file-details-item>
+
+  <file-details-item
+    [caption]="'Type:'"
+    [value]="typeDetailes(file)"
+    [title]="'File type'"
+  ></file-details-item>
+
+  <file-details-item
+    *ngIf="file.isFile"
+    [caption]="'Extension:'"
+    [value]="file.extension"
+    [title]="'Original extension'"
+  ></file-details-item>
+
+  <file-details-item
+    *ngIf="file.isShortcut"
+    [caption]="'Target:'"
+    [value]="file.reference.name"
+    [title]="'Shortcut target'"
+    [target]="file.reference"
+  ></file-details-item>
+
+  <file-details-item
+    *ngIf="!isRoot(file)"
+    [caption]="'Location:'"
+    [value]="file.parent.name"
+    [title]="'File path'"
+    [target]="file.parent"
+  ></file-details-item>
+
+  <file-details-item
+    *ngIf="file.isDirectory || isRoot(file)"
+    [caption]="'Contain:'"
+    [value]="file.numOfItems + ' items'"
+    [title]="'Number of items in directory'"
+  ></file-details-item>
+
+  <file-details-item
+    *ngIf="file.isFile"
+    [caption]="'Size:'"
+    [value]="fileSize"
+    [title]="'File size on disk'"
+  ></file-details-item>
+
+  <hr />
+  <file-details-item
+    [caption]="'Created:'"
+    [value]="file.dates.creation.getDate()"
+    [title]="'Creation date'"
+  ></file-details-item>
+
+  <file-details-item
+    [caption]="'Modified:'"
+    [value]="file.dates.modified.getDate()"
+    [title]="'Last date when the file was modified'"
+  ></file-details-item>
+
+  <file-details-item
+    [caption]="'Accessed:'"
+    [value]="file.dates.access.getDate()"
+    [title]="'Most recent access date'"
+  ></file-details-item>
+
+  <hr />
+  <div class="description" [style.display]="descriptionDisplay()">
+    <div>Description:</div>
+    <div [className]="'note'">
+      <div
+        *ngIf="!noteExist() && !lastSelected"
+        [className]="'add-description-caption'"
+      >
+        Add description
+      </div>
+      <textarea
+        #note
+        *ngIf="noteExist() || lastSelected"
+        [className]="noteClassName"
+        [readOnly]="noteReadOnly"
+        [spellcheck]="spellCheck"
+        [value]="getDescription()"
+      ></textarea>
+      <button
+        #editBtn
+        [className]="'edit-btn fas fa-edit'"
+        [style.display]="editBtnVisiblity()"
+        (click)="noteEditDisplay()"
+      ></button>
+    </div>
+  </div>
+</div>

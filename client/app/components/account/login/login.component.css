@@ -1,0 +1,91 @@
+.login-container {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 25px grey;
+  padding: 20px 0 30px 0;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  top: 200px;
+  left: 0;
+  margin: auto;
+  transition: 1s;
+
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.login-caption {
+  font-size: 28px;
+  margin: 25px;
+  align-content: center;
+  cursor: default;
+}
+
+.login-input,
+.login-btn {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 25px;
+  opacity: 0.85;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 325px;
+  color: white;
+  background-color: #7c7ea3;
+}
+
+.login-input:hover {
+  opacity: 1;
+}
+.login-btn:hover {
+  background-color: #575a8b;
+  opacity: 1;
+}
+
+.errors {
+  padding-top: 5px;
+  padding-left: 25px;
+  color: red;
+}
+
+.autologin-checkbox {
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btns-bar {
+  display: flex;
+}
+
+.other-options-bar {
+  padding-left: 25px;
+  padding-top: 15px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(204, 0, 187);
+
+  margin-bottom: 10px;
+}
+
+.links:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+<div #mainContainer class="file-manager-container">
+  <div class="upper-section">
+    <div class="path-bar-section"><path-bar></path-bar></div>
+    <div class="toolbar-section"><toolbar></toolbar></div>
+  </div>
+  <div class="lower-section">
+    <div class="nav-tree-section"><nav-tree></nav-tree></div>
+    <div class="central-section">
+      <div
+        [className]="'dir-view-section dir-view-section-' + dirViewFullSize()"
+      >
+        <dir-view></dir-view>
+      </div>
+      <div
+        [className]="
+          'file-details-section file-details-section-' + dirViewFullSize()
+        "
+      >
+        <file-details
+          (toggleDetails)="toggleDetailsSection($event)"
+        ></file-details>
+      </div>
+    </div>
+    <drag-and-drop-icon></drag-and-drop-icon>
+  </div>
+</div>

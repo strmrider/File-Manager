@@ -1,0 +1,10 @@
+<div
+  #dirListItem
+  [className]="'move-modal-dir-list-item ' + style.current.bg"
+  (click)="selectDir()"
+  (dblclick)="loadNewDir()"
+  (mouseover)="onMouseover()"
+  (mouseleave)="onMouseleave()"
+>
+  {{ dir.name }}
+</div>

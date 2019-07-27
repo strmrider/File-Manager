@@ -1,0 +1,42 @@
+<div
+  #frame
+  class="frame"
+  [style.display]="getVisibility()"
+  (click)="bgClose($event)"
+>
+  <div class="top-bar">
+    <div class="top-bar-buttons">
+      <button
+        class="top-bar-button menu-button fas fa-ellipsis-v"
+        [title]="'File menu'"
+        (click)="openMenu($event)"
+      ></button>
+      <span
+        [title]="'Close'"
+        class="top-bar-button close-button"
+        (click)="close()"
+        >&#10006;</span
+      >
+    </div>
+    <div [title]="'File name'" class="file-name">{{ filename() }}</div>
+  </div>
+  <div *ngIf="noPreview" class="no-preview">Preview unavailable</div>
+  <div
+    *ngIf="isTextFile()"
+    class="file-preview-element text-file"
+    [innerHTML]="textFile"
+  ></div>
+  <img *ngIf="isImage()" class="file-preview-element image" [src]="src" />
+  <video
+    *ngIf="isVideo()"
+    class="file-preview-element video"
+    [src]="src"
+    controls
+  ></video>
+  <audio
+    *ngIf="isAudio()"
+    class="file-preview-element audio"
+    [src]="src"
+    controls
+  ></audio>
+</div>

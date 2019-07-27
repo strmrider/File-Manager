@@ -1,0 +1,21 @@
+.container {
+  margin: 10px;
+  cursor: default;
+  user-select: none;
+}
+
+.caption {
+  width: 100px;
+  display: inline-flex;
+  user-select: none;
+}
+
+.link {
+  color: rgb(53, 53, 252);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+}

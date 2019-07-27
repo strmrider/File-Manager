@@ -1,0 +1,10 @@
+.drag-selection-box-div {
+  display: none;
+  position: absolute;
+  border: 1px solid #659cee;
+  background-color: rgb(122, 204, 231);
+  opacity: 0.5;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+}

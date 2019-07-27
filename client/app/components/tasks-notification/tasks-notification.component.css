@@ -1,0 +1,81 @@
+.tasks-notification-container {
+  display: none;
+  position: absolute;
+  background-color: rgb(62, 131, 173);
+  color: rgb(231, 220, 159);
+  left: 30px;
+  bottom: 30px;
+  padding: 8px;
+  font-size: 18px;
+  width: 350px;
+  box-shadow: 4px 4px 10px #1a1919;
+  z-index: 11;
+
+  -webkit-animation-name: animelast;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animelast;
+  animation-duration: 0.4s;
+
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes animelast {
+  from {
+    bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animelast {
+  from {
+    bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+.message {
+  float: left;
+  padding-right: 0;
+  margin: 5px;
+}
+
+.undo-button {
+  margin: 5px;
+  margin-right: 10px;
+  float: right;
+  background-color: #94adbd;
+  color: white;
+  outline: 0;
+  border: none;
+  font-size: 17px;
+  border: solid;
+}
+
+.undo-button:hover {
+  color: black;
+}
+
+.undo-button:active {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+.close-button {
+  margin: 5px;
+  margin-right: 10px;
+  color: white;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}

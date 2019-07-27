@@ -1,0 +1,100 @@
+.frame {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.top-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #131010c4;
+}
+
+.top-bar-buttons {
+  float: right;
+  margin-right: 10px;
+}
+
+.top-bar-button {
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 10px;
+}
+
+.top-bar-button:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.8;
+}
+
+.close-button {
+  font-weight: bold;
+}
+
+.menu-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.file-name {
+  float: left;
+  padding-left: 50px;
+  margin-top: 5px;
+  width: 40%;
+  color: wheat;
+  align-content: center;
+  cursor: default;
+}
+
+.file-preview-element {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: block;
+}
+
+.text-file {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 1000px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: white;
+  cursor: default;
+  white-space: pre-wrap;
+}
+
+.video {
+  outline: 0;
+}
+
+.image {
+  background-color: white;
+  max-height: 750px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.no-preview {
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(161, 129, 123);
+  color: white;
+
+  margin: auto;
+  text-align: center;
+  margin-top: 300px;
+}

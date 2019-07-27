@@ -1,0 +1,32 @@
+<div class="file-uploader" [style.display]="visibility()">
+  <div class="top-bar">
+    <div class="top-bar-buttons">
+      <span
+        class="top-bar-btn"
+        [style.display]="minVisible()"
+        (click)="changeSize()"
+        >&#x02013;</span
+      >
+      <span
+        class="top-bar-btn"
+        [style.display]="maxVisible()"
+        (click)="changeSize()"
+        >&#x025A1;</span
+      >
+      <span class="top-bar-btn" (click)="exitClick()">&times;</span>
+    </div>
+    <span class="total-progress"
+      >{{ uploadManager.uploaded }} / {{ uploadManager.total }}</span
+    >
+    <progress
+      [value]="uploadManager.uploaded"
+      [max]="uploadManager.total"
+    ></progress>
+  </div>
+  <div class="uploads-list" [style.display]="uploadListVisibility()">
+    <div *ngFor="let file of uploadManager.filesList; index as i">
+      <upload-manager-item [index]="i"></upload-manager-item>
+    </div>
+  </div>
+  <input-upload></input-upload>
+</div>

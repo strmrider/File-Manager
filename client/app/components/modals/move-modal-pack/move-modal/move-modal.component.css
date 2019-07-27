@@ -1,0 +1,85 @@
+.move-modal-container {
+  margin-top: 15px;
+  width: 240px;
+}
+
+.move-modal-nav-actions {
+  display: inline-flex;
+  height: 25px;
+}
+
+.buttons-container {
+  margin: 10px;
+}
+
+.move-modal-nav-btn {
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.move-modal-nav-btn:hover {
+  box-shadow: 2px 2px 2px #aaaaaa;
+  background-color: rgb(106, 106, 112);
+  color: white;
+}
+
+.move-modal-btn {
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  background-color: white;
+  color: black;
+}
+
+.move-btn {
+  border: 2px solid #008cba;
+}
+
+.move-btn:hover {
+  background-color: #008cba;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  color: white;
+}
+
+.close-btn {
+  border: 2px solid #f8f5f5;
+}
+
+.close-btn:hover {
+  background-color: #f8f5f5;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.new-folder-container {
+  display: inline-block;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  width: 250px;
+  height: 25px;
+}
+
+.new-folder-input {
+  float: left;
+  height: 18px;
+}
+.move-modal-dir-list {
+  margin-top: 15px;
+  width: 230px;
+  height: 200px;
+  border-style: solid;
+  overflow: auto;
+}
+
+.move-modal-dir-name {
+  font-size: 24px;
+  margin-top: 15px;
+}

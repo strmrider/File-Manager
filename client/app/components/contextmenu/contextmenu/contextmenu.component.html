@@ -1,0 +1,24 @@
+<ul
+  class="contextmenu-related contextmenu-list"
+  [style.visibility]="visibility()"
+>
+  <li
+    *ngFor="let item of items"
+    class="contextmenu-related contextmenu-list-item"
+    [style.display]="itemVisibility(item.visibility)"
+  >
+    <div
+      *ngIf="item.text != 'hr/'"
+      class="contextmenu-related contextmenu-item"
+      (click)="click(item)"
+    >
+      <i
+        [className]="'contextmenu-related contextmenu-item-image ' + item.icon"
+      ></i>
+      <div class="contextmenu-related contextmenu-item-text">
+        {{ item.text }}
+      </div>
+    </div>
+    <hr *ngIf="item.text == 'hr/'" class="contextmenu-related" />
+  </li>
+</ul>

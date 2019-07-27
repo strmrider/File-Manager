@@ -1,0 +1,36 @@
+.message-frame {
+  padding: 10px;
+  font-size: 18px;
+  min-width: 100px;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.buttons-panel {
+  margin-top: 20px;
+}
+.ok-btn {
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+}
+
+.ok-btn:hover {
+  background-color: #008cba;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  color: white;
+}

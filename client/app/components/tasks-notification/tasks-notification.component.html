@@ -1,0 +1,11 @@
+<div class="tasks-notification-container" [style.display]="visibility">
+  <div class="close-button" (click)="close()">&#10006;</div>
+  <div class="message">{{ message }}</div>
+  <button
+    class="undo-button"
+    [style.display]="undoneDisplay()"
+    (click)="undo()"
+  >
+    Undo
+  </button>
+</div>

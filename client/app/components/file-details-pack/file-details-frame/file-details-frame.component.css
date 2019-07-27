@@ -1,0 +1,31 @@
+.file-details-container {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(241, 239, 239);
+  border-left: 2px, solid;
+  transition: 0.5s;
+}
+
+.file-details-container-closed {
+  width: 0;
+  transition: 0.5s;
+}
+
+.top-bar {
+  width: 100%;
+  float: right;
+  background-color: rgb(48, 48, 48);
+}
+
+.details-close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 26px;
+  margin-right: 5px;
+  color: white;
+}
+
+.details-close-btn:hover {
+  background-color: white;
+  color: black;
+}

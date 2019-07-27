@@ -1,0 +1,43 @@
+.user-bar {
+  position: relative;
+  top: 0;
+  background-color: rgb(37, 37, 37);
+  width: 99.5%;
+  height: 5%;
+  max-height: 5%;
+  padding-top: 20px;
+  padding-left: 10px;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.user-data {
+  float: left;
+  color: white;
+  margin-right: 25px;
+}
+
+.storage-size {
+  color: white;
+  margin-right: 25px;
+}
+
+.user-toolbar-item {
+  float: left;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.logout-btn:hover {
+  color: rgb(245, 92, 92);
+}
+
+.server-mode-online {
+  color: greenyellow;
+}
+
+.server-mode-offline {
+  color: rgb(245, 92, 92);
+}

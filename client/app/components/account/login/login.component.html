@@ -1,0 +1,44 @@
+<div *ngIf="display" class="login-container">
+  <div class="login-caption">Login</div>
+  <div class="data-input">
+    <input
+      #username
+      class="login-input"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+    <input
+      #password
+      class="login-input"
+      type="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+  </div>
+  <label>
+    <input
+      class="autologin-checkbox"
+      type="checkbox"
+      name="autologin"
+      value="autologin"
+      checked
+      (change)="autologinCheckBoxClick()"
+    />Remember me<br />
+  </label>
+  <button class="login-btn" (click)="login()">
+    Login
+  </button>
+  <div class="errors">{{ errorMessage }}</div>
+  <div class="other-options-bar">
+    <a class="links guest-btn" (click)="demoUser()">
+      Demo user
+    </a>
+    <a class="links new-account-btn" (click)="newAccount()">
+      Create account
+    </a>
+  </div>
+  <div>{{ response }}</div>
+</div>

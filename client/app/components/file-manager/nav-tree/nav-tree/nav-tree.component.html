@@ -1,0 +1,20 @@
+<div class="nav-tree-container" (mousedown)="onMouseDown()">
+  <dir-tree [dir]="service.mainDir" [indentation]="1"></dir-tree>
+  <nav-tree-item
+    [caption]="service.shared.name"
+    [icon]="'fas fa-users'"
+    [targetDir]="service.shared"
+  ></nav-tree-item>
+
+  <nav-tree-item
+    [caption]="service.starred.name"
+    [icon]="'fas fa-star'"
+    [targetDir]="service.starred"
+  ></nav-tree-item>
+
+  <nav-tree-item
+    [caption]="service.trash.name"
+    [icon]="'fas fa-trash'"
+    [targetDir]="service.trash"
+  ></nav-tree-item>
+</div>

@@ -1,0 +1,6 @@
+<div [className]="'container ' + uniqueClass" [title]="title">
+  <span class="caption">{{ caption }}</span>
+  <span [className]="'value ' + linkClass" (click)="valueClick()">{{
+    value
+  }}</span>
+</div>

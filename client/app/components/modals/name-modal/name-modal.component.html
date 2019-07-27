@@ -1,0 +1,20 @@
+<div [style.display]="visibility()">
+  <task-modal [title]="title" (onClose)="close()">
+    <input
+      #nameInput
+      type="text"
+      [className]="'name-modal-input'"
+      (click)="onClick()"
+      (input)="onClick()"
+      spellcheck="false"
+    />
+    <div [className]="'buttons-container'">
+      <button class="modal-button ok-btn" (click)="approveName()">
+        {{ buttonTitle() }}
+      </button>
+      <button class="modal-button close-btn" (click)="close()">
+        Close
+      </button>
+    </div>
+  </task-modal>
+</div>
