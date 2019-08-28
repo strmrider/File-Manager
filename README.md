@@ -1,5 +1,5 @@
 # FileManager
-Online, single page application, file manager. Built with angular. 
+Online, single page application, file manager. Built with Angular. 
 Written in Typescript, html and css on front end and php on back end, Uses MySQL as database.
 
 ### [Demo site](https://file-manager-30b0d.web.app/)
