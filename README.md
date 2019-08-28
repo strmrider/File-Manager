@@ -19,7 +19,7 @@ Written in Typescript, HTML and CSS on front end and PHP on back end, Uses MySQL
 - Includes synchronization of browsers and tabs.
 
 #### File preview:
-- Supports preview of images, video, audio and text files;
+- Supports preview of images, video, audio and text files.
 
 ## Configurations
 The file [config.json](https://github.com/strmrider/file-manager/blob/master/src/assets/config.json) allows 
@@ -40,4 +40,4 @@ notified and updated.
 
 
 ## Server
-Written in php and uses MySQL. Includes app's storage directories as well. Read the [README](https://github.com/strmrider/file-manager/blob/master/SERVER_README.md) file in the server's directory for extended details.
+Written in php and uses MySQL. Includes app's storage directories as well. Read the [README](https://github.com/strmrider/File-Manager/blob/master/server/php/README.md) file in the server's directory for extended details.
