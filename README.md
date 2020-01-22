@@ -9,10 +9,10 @@ Written in Typescript, HTML and CSS on front end and PHP on back end, Uses MySQL
 - Supports directories, files and shortcuts.
 - Upload and download of directories and files.
 - Transfer, remove, restore, delete, edit and copy files.
-- Search items, sort and and order.
+- Search items, sort and order.
 
 #### UI:
-- Includes navigation tools, context menues and toolbars.
+- Includes navigation tools, context menus and toolbars.
 - Supports drag and drop for transfer and file upload.
 - Drag selection box for multiple selection.
 - Includes keyboard support.
